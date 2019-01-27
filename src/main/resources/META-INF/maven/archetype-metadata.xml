@@ -25,18 +25,5 @@
       </includes>
     </fileSet>
   </fileSets>
-  <fileSet filtered="false">
-    <directory>.mvnw/wrapper</directory>
-    <includes>
-      <include>**/*</include>
-    </includes>
-  </fileSet>
-  <fileSet filtered="false">
-    <directory>./</directory>
-    <includes>
-      <include>mvnw</include>
-      <include>mvnw.cmd</include>
-    </includes>
-  </fileSet>
 
 </archetype-descriptor>
