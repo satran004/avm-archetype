@@ -72,8 +72,7 @@
                 <configuration>
                     <mode>local</mode>
                     <avmLibDir>${avm.lib.dir}</avmLibDir>
-                    <localDefaultAddress>0xa092de3423a1e77f4c5f8500564e3601759143b7c0e652a7012d35eb67b283ca
-                    </localDefaultAddress>
+                    <localDefaultAddress>0xa092de3423a1e77f4c5f8500564e3601759143b7c0e652a7012d35eb67b283ca</localDefaultAddress>
                 </configuration>
                 <executions>
                     <execution>
@@ -100,6 +99,7 @@
                         <configuration>
                             <mode>remote</mode>
                             <avmLibDir>${avm.lib.dir}</avmLibDir>
+                            <web3rpcUrl></web3rpcUrl>
                         </configuration>
                         <executions>
                             <execution>
