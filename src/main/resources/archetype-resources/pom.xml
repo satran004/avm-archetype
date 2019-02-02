@@ -15,22 +15,17 @@
 
         <aion4j.plugin.version>${aion4j-maven-plugin-version}</aion4j.plugin.version>
         <avm.lib.dir>${project.basedir}/lib</avm.lib.dir>
+
+        <contract.main.class>${package}.HelloAvm</contract.main.class>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.aion</groupId>
-            <artifactId>avm-api</artifactId>
+            <artifactId>avm-lib</artifactId>
             <version>0.0.0</version>
             <scope>system</scope>
-            <systemPath>${avm.lib.dir}/org-aion-avm-api.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.aion</groupId>
-            <artifactId>avm-userlib</artifactId>
-            <version>0.0.0</version>
-            <scope>system</scope>
-            <systemPath>${avm.lib.dir}/org-aion-avm-userlib.jar</systemPath>
+            <systemPath>${avm.lib.dir}/avm.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -48,22 +43,10 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>${package}.HelloAvm</mainClass>
+                            <mainClass>${contract.main.class}</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M3</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.surefire</groupId>
-                        <artifactId>surefire-junit47</artifactId>
-                        <version>3.0.0-M3</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.aion4j</groupId>
@@ -84,6 +67,18 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>surefire-junit47</artifactId>
+                        <version>3.0.0-M3</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
