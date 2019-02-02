@@ -30,7 +30,7 @@ public class HelloAvmRuleTest {
     }
 
     @Test
-    public void testSumInput() {
+    public void testSayHello() {
         //calling Dapps:
         // 1- encode method name and arguments
         // 2- make the call;
