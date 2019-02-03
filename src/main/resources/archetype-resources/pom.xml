@@ -62,8 +62,8 @@
                         <goals>
                             <goal>clean</goal>
                             <goal>init</goal>
-                            <!--<goal>class-verifier</goal>-->
                             <goal>prepack</goal>
+                            <!--<goal>class-verifier</goal>-->
                         </goals>
                     </execution>
                 </executions>
@@ -101,8 +101,8 @@
                                 <goals>
                                     <goal>clean</goal>
                                     <goal>init</goal>
-                                    <!--<goal>class-verifier</goal>-->
                                     <goal>prepack</goal>
+                                    <!--<goal>class-verifier</goal>-->
                                 </goals>
                             </execution>
                         </executions>
