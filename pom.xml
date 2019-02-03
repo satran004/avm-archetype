@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.aion4j</groupId>
   <artifactId>avm-archetype</artifactId>
-  <version>0.6-SNAPSHOT</version>
+  <version>0.6</version>
   <name>Archetype - avm-archetype</name>
   <packaging>maven-archetype</packaging>
   <description>Maven archetype which can be used to generate Aion AVM based smart contract project in java</description>
@@ -24,7 +24,7 @@
     <url>https://github.com/satran004/avm-archetype/</url>
     <connection>scm:git:git@github.com:satran004/avm-archetype.git</connection>
     <developerConnection>scm:git:git@github.com:satran004/avm-archetype.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>avm-archetype-0.6</tag>
   </scm>
 
   <properties>
