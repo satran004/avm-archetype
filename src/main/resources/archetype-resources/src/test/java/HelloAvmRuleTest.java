@@ -1,8 +1,8 @@
 package ${package};
 
 import org.aion.avm.api.ABIEncoder;
-import org.aion.avm.core.util.AvmRule;
-import org.aion.vm.api.interfaces.Address;
+import org.aion.avm.api.Address;
+import org.aion.avm.tooling.AvmRule;
 import org.aion.vm.api.interfaces.ResultCode;
 import org.junit.Assert;
 import org.junit.Before;
