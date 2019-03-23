@@ -22,6 +22,6 @@ try {
     pomFile.newWriter().withWriter { w ->
         w << pomContent
     }
-} catch(Error e) {
+} catch(Exception e) {
 
 }
