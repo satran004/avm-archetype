@@ -41,5 +41,31 @@ public class HelloAvmRuleTest {
         ResultCode status = result.getReceiptStatus();
         Assert.assertTrue(status.isSuccess());
     }
+
+    @Test
+    public void testSetString() {
+        //calling Dapps:
+        // 1- encode method name and arguments
+        // 2- make the call;
+        byte[] txData = ABIEncoder.encodeMethodArguments("setString","Hello Alice");
+        AvmRule.ResultWrapper result = avmRule.call(from, dappAddr, BigInteger.ZERO, txData);
+
+        // getReceiptStatus() checks the status of the transaction execution
+        ResultCode status = result.getReceiptStatus();
+        Assert.assertTrue(status.isSuccess());
+    }
+
+    @Test
+    public void testGetString() {
+        //calling Dapps:
+        // 1- encode method name and arguments
+        // 2- make the call;
+        byte[] txData = ABIEncoder.encodeMethodArguments("getString");
+        AvmRule.ResultWrapper result = avmRule.call(from, dappAddr, BigInteger.ZERO, txData);
+
+        // getReceiptStatus() checks the status of the transaction execution
+        ResultCode status = result.getReceiptStatus();
+        Assert.assertTrue(status.isSuccess());
+    }
 }
 
