@@ -1,8 +1,7 @@
 package ${package};
 
+import avm.BlockchainRuntime;
 import org.aion.avm.tooling.abi.Callable;
-import org.aion.avm.userlib.abi.ABIDecoder;
-import org.aion.avm.api.BlockchainRuntime;
 
 public class HelloAvm
 {

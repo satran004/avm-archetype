@@ -1,7 +1,7 @@
 package ${package};
 
-import org.aion.avm.userlib.abi.ABIEncoder;
-import org.aion.avm.api.Address;
+import org.aion.avm.core.util.ABIUtil;
+import avm.Address;
 import org.aion.avm.tooling.AvmRule;
 import org.aion.vm.api.interfaces.ResultCode;
 import org.junit.Assert;
@@ -34,7 +34,7 @@ public class HelloAvmRuleTest {
         //calling Dapps:
         // 1- encode method name and arguments
         // 2- make the call;
-        byte[] txData = ABIEncoder.encodeMethodArguments("sayHello");
+        byte[] txData = ABIUtil.encodeMethodArguments("sayHello");
         AvmRule.ResultWrapper result = avmRule.call(from, dappAddr, BigInteger.ZERO, txData);
 
         // getReceiptStatus() checks the status of the transaction execution
@@ -47,7 +47,7 @@ public class HelloAvmRuleTest {
         //calling Dapps:
         // 1- encode method name and arguments
         // 2- make the call;
-        byte[] txData = ABIEncoder.encodeMethodArguments("setString","Hello Alice");
+        byte[] txData = ABIUtil.encodeMethodArguments("setString","Hello Alice");
         AvmRule.ResultWrapper result = avmRule.call(from, dappAddr, BigInteger.ZERO, txData);
 
         // getReceiptStatus() checks the status of the transaction execution
@@ -60,7 +60,7 @@ public class HelloAvmRuleTest {
         //calling Dapps:
         // 1- encode method name and arguments
         // 2- make the call;
-        byte[] txData = ABIEncoder.encodeMethodArguments("getString");
+        byte[] txData = ABIUtil.encodeMethodArguments("getString");
         AvmRule.ResultWrapper result = avmRule.call(from, dappAddr, BigInteger.ZERO, txData);
 
         // getReceiptStatus() checks the status of the transaction execution

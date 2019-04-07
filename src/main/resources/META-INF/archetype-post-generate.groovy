@@ -14,7 +14,10 @@ try {
 
     def replace = "x.x.x";
 
-    def version = new URL ("https://raw.githubusercontent.com/satran004/aion4j-maven-plugin/release_ver/release_ver").getText([connectTimeout: 3000, readTimeout: 3000])
+    def version = new URL ("https://bloxbean.github.io/aion4j-release/aion4j-maven-plugin").getText([connectTimeout: 3000, readTimeout: 3000])
+
+    if(version.contains("<"))
+        return;
 
     pomContent = pomContent.replace("x.x.x", version.trim())
 
